@@ -21,9 +21,22 @@ namespace ShopperSizerREST.Models
 
         }
 
-        public int Id { get => _id;}
-        public int Number { get => _number; set => _number = value; }
-
-
+        public int Id { get => _id;  }
+        public int Number
+        {
+            get { return _number; }
+            set
+            {
+                _number = value;
+                if (Number == 0 && value <= 0)
+                {
+                    _number = value;
+                }
+                else if(Number > 0)
+                {
+                    _number = value;
+                }
+            }
+        }
     }
 }

@@ -15,7 +15,7 @@ namespace ShopperSizerREST.Controllers
         //private static int _idCounter = 1;
         private static List<LiveNumber> numbers = new List<LiveNumber>()
         {
-            new LiveNumber(1,5), new LiveNumber(2,10)
+            new LiveNumber(1,0)
         };
         
         // GET: api/LiveNumber
@@ -45,7 +45,7 @@ namespace ShopperSizerREST.Controllers
             LiveNumber i = Get(id);
             if(i != null)
             {
-                i.Number = value.Number;
+                i.Number = i.Number + value.Number;
             }
         }
 
