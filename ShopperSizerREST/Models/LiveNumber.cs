@@ -13,7 +13,7 @@ namespace ShopperSizerREST.Models
         public LiveNumber(int id, int number)
         {
             _id = id;
-            _number = number;
+            Number = number;
         }
 
         public LiveNumber()
@@ -25,18 +25,14 @@ namespace ShopperSizerREST.Models
         public int Number
         {
             get { return _number; }
-            set
-            {
-                _number = value;
-                if (Number == 0 && value <= 0)
-                {
-                    _number = value;
-                }
-                else if(Number > 0)
-                {
-                    _number = value;
-                }
-            }
+            set { _number = value; }
+            //set
+            //{  
+            //    if (value > -1)
+            //    {
+            //        _number = value;
+            //    }
+            //}
         }
     }
 }

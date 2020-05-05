@@ -45,10 +45,11 @@ namespace ShopperSizerREST.Controllers
             LiveNumber i = Get(id);
             if(i != null)
             {
-                i.Number = i.Number + value.Number;
+                var result = i.Number + value.Number;
+                if (result > -1) i.Number = result;
             }
         }
-
+            
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
         public void Delete(int id)
