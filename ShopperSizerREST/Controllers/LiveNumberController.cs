@@ -46,7 +46,6 @@ namespace ShopperSizerREST.Controllers
             if(i != null)
             {
                 i.Number = value.Number;
-                i.Id = value.Id;
             }
         }
 

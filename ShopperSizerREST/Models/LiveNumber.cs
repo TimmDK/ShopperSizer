@@ -21,7 +21,7 @@ namespace ShopperSizerREST.Models
 
         }
 
-        public int Id { get => _id; set => _id = value; }
+        public int Id { get => _id;}
         public int Number { get => _number; set => _number = value; }
 
 
