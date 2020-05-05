@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopperSizerREST", "ShopperSizerREST\ShopperSizerREST.csproj", "{F9BBCAFF-2347-48B7-AE58-445E338D90CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDP ServerBroad", "UDP ServerBroad\UDP ServerBroad.csproj", "{9BB7E6C3-122A-49CA-81CF-3BC971F36088}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDP ClientBroad", "UDP ClientBroad\UDP ClientBroad.csproj", "{F5939AC0-B647-4140-BF60-F3B422DA184A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{F9BBCAFF-2347-48B7-AE58-445E338D90CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9BBCAFF-2347-48B7-AE58-445E338D90CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9BBCAFF-2347-48B7-AE58-445E338D90CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BB7E6C3-122A-49CA-81CF-3BC971F36088}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BB7E6C3-122A-49CA-81CF-3BC971F36088}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BB7E6C3-122A-49CA-81CF-3BC971F36088}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BB7E6C3-122A-49CA-81CF-3BC971F36088}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5939AC0-B647-4140-BF60-F3B422DA184A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5939AC0-B647-4140-BF60-F3B422DA184A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5939AC0-B647-4140-BF60-F3B422DA184A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5939AC0-B647-4140-BF60-F3B422DA184A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
