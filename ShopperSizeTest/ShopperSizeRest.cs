@@ -8,7 +8,7 @@ using System.Text;
 namespace ShopperSizeTest
 {
     [TestClass]
-    class ShopperSizeRest
+    public class ShopperSizeRest
     {
         [TestMethod] 
         public void GetAllNumbers()

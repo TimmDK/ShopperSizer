@@ -40,14 +40,17 @@ namespace ShopperSizerREST.Controllers
 
         // PUT: api/LiveNumber/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] LiveNumber value)
+        public LiveNumber Put(int id, [FromBody] LiveNumber value)
         {
             LiveNumber i = Get(id);
             if(i != null)
             {
                 var result = i.Number + value.Number;
                 if (result > -1) i.Number = result;
+
+               
             }
+            return Get(id);
         }
             
         // DELETE: api/ApiWithActions/5
