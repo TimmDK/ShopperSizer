@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UDP ServerBroad", "UDP Serv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UDP ClientBroad", "UDP ClientBroad\UDP ClientBroad.csproj", "{F5939AC0-B647-4140-BF60-F3B422DA184A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopperSizeTest", "ShopperSizeTest\ShopperSizeTest.csproj", "{376E0A67-9EA2-4711-A4E4-958E483E1008}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopperSizerTest", "ShopperSizerTest\ShopperSizerTest.csproj", "{39E2AF62-D081-4668-A9D7-3F2C3A3BA7F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{F5939AC0-B647-4140-BF60-F3B422DA184A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5939AC0-B647-4140-BF60-F3B422DA184A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5939AC0-B647-4140-BF60-F3B422DA184A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{376E0A67-9EA2-4711-A4E4-958E483E1008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{376E0A67-9EA2-4711-A4E4-958E483E1008}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{376E0A67-9EA2-4711-A4E4-958E483E1008}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{376E0A67-9EA2-4711-A4E4-958E483E1008}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39E2AF62-D081-4668-A9D7-3F2C3A3BA7F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39E2AF62-D081-4668-A9D7-3F2C3A3BA7F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39E2AF62-D081-4668-A9D7-3F2C3A3BA7F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39E2AF62-D081-4668-A9D7-3F2C3A3BA7F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
