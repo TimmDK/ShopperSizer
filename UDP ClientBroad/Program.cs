@@ -58,7 +58,7 @@ namespace UDP_ClientBroad
                     }
 
 
-                    Thread.Sleep(2000);
+                    Thread.Sleep(1000);
                 }
             }
             catch (Exception e)

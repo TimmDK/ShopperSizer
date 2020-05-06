@@ -21,7 +21,17 @@ namespace UDP_ServerBroad
 
             while (true)
             {
-                int number = rand.Next(-1, 2);
+                int rn = rand.Next(0, 101);
+                //0-40 = -1
+                //41-60 = 0
+                //61-90 = 1
+                //91-100 = 2
+                int number = 0;
+                if (rn >= 0 && rn <= 40) number = -1;
+                else if (rn >= 41 && rn <= 60) number = 0;
+                else if (rn >= 61 && rn <= 90) number = 1;
+                else if (rn >= 91 && rn <= 100) number = 2;
+
                 Byte[] sendBytes = Encoding.ASCII.GetBytes(number.ToString());
                 try
                 {
@@ -34,7 +44,7 @@ namespace UDP_ServerBroad
                 }
 
                 Console.WriteLine(" " + number);
-                Thread.Sleep(2000);
+                Thread.Sleep(1000);
             }
         }
     }
