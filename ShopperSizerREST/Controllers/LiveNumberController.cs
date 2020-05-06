@@ -15,7 +15,7 @@ namespace ShopperSizerREST.Controllers
         //private static int _idCounter = 1;
         private static List<LiveNumber> numbers = new List<LiveNumber>()
         {
-            new LiveNumber(1,5), new LiveNumber(2,10)
+            new LiveNumber(1,0)
         };
         
         // GET: api/LiveNumber
@@ -40,15 +40,19 @@ namespace ShopperSizerREST.Controllers
 
         // PUT: api/LiveNumber/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] LiveNumber value)
+        public LiveNumber Put(int id, [FromBody] LiveNumber value)
         {
             LiveNumber i = Get(id);
             if(i != null)
             {
-                i.Number = value.Number;
-            }
-        }
+                var result = i.Number + value.Number;
+                if (result > -1) i.Number = result;
 
+               
+            }
+            return Get(id);
+        }
+            
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
         public void Delete(int id)

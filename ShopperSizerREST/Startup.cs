@@ -46,6 +46,13 @@ namespace ShopperSizerREST
             {
                 endpoints.MapControllers();
             });
+
+            app.UseCors(
+            options =>
+            {
+                options.AllowAnyOrigin().AllowAnyMethod();
+                // allow everything from anywhere
+            });
         }
     }
 }

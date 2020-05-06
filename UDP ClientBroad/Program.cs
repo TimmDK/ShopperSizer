@@ -38,6 +38,7 @@ namespace UDP_ClientBroad
                     using (var client = new HttpClient())
                     {
                         client.BaseAddress = new Uri("https://shoppersizerrest.azurewebsites.net/api/LiveNumber/");
+                        //client.BaseAddress = new Uri("https://localhost:44375/api/livenumber/");
                         client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                         string stringToSend = "{\"number\":" + int.Parse(receivedData) + "}";
