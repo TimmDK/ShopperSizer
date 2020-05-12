@@ -7,22 +7,28 @@ namespace ShopperSizerREST.Models
 {
     public class LimitNumber
     {
-        private int _tal;
+        private int _limittal;
+        private readonly int _Id;
 
-        public int Tal 
+        public int LimitTal
         {
-            get { return _tal; }
-            set { _tal = value; }
+            get { return _limittal; }
+            set { _limittal = value; }
         }
 
-        public LimitNumber(int tal)
+        public int Id => _Id;
+
+        public LimitNumber(int Id, int limittal)
         {
-            tal = Tal;
+            _limittal = limittal;
+            _Id = Id;
         }
 
         public LimitNumber()
         {
 
         }
+
+        //Anders mein fuhrer
     }
 }
