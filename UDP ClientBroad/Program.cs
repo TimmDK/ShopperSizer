@@ -21,7 +21,7 @@ namespace UDP_ClientBroad
             //client.BaseAddress = new Uri("http://anbo-bookstorerest.azurewebsites.net/api/Books/");
             //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-
+            int i = 0;
 
 
 
@@ -37,13 +37,13 @@ namespace UDP_ClientBroad
 
                     using (var client = new HttpClient())
                     {
-                        client.BaseAddress = new Uri("https://shoppersizerrest.azurewebsites.net/api/LiveNumber/");
+                        client.BaseAddress = new Uri("https://shoppersizerrest.azurewebsites.net/api/");
                         //client.BaseAddress = new Uri("https://localhost:44375/api/livenumber/");
                         client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                         string stringToSend = "{\"number\":" + int.Parse(receivedData) + "}";
 
-                        var response = client.PutAsync("1", new StringContent(stringToSend, Encoding.UTF8, "application/json")).Result;
+                        var response = client.PutAsync("LiveNumber/1", new StringContent(stringToSend, Encoding.UTF8, "application/json")).Result;
                         if (response.IsSuccessStatusCode)
                         {
                             Console.Write("Success");
@@ -55,6 +55,16 @@ namespace UDP_ClientBroad
                             //Console.WriteLine(response.StatusCode);
                             //Console.WriteLine(response.RequestMessage);
                         }
+
+                        if (i >= 10)
+                        {
+                            var result = client.GetAsync("LiveNumber/1");
+                            var toSend = result.Result.Content;
+                            client.PostAsync("datasets", toSend);
+                            //new StringContent(result.ToString())
+                            i = 0;
+                        }
+                        i++;
 
                     }
 
