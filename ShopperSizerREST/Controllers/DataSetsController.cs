@@ -78,10 +78,10 @@ namespace ShopperSizerREST.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<DataSet>> PostDataSet([FromBody] int dataCount)
+        public async Task<ActionResult<DataSet>> PostDataSet(DataSet dataSet)
         {
-            DataSet dataSet = new DataSet();
-            dataSet.Count = dataCount;
+            //DataSet dataSet = new DataSet();
+            //dataSet.Count = int.Parse(dataCount);
             _context.DataSets.Add(dataSet);
             await _context.SaveChangesAsync();
 
