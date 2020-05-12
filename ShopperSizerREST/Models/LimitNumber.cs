@@ -28,5 +28,7 @@ namespace ShopperSizerREST.Models
         {
 
         }
+
+        //Anders mein fuhrer
     }
 }
