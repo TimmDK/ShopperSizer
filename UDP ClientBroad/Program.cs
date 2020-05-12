@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -56,12 +57,22 @@ namespace UDP_ClientBroad
                             //Console.WriteLine(response.RequestMessage);
                         }
 
-                        if (i >= 10)
+                        if (i >= 2)
                         {
                             var result = client.GetAsync("LiveNumber/1");
-                            var toSend = result.Result.Content;
-                            client.PostAsync("datasets", toSend);
+                            var toSend = result.Result.Content.ReadAsStringAsync().Result;
+                            var st = toSend.Split(':').Last().Split('}').First();
+                            //Console.WriteLine(st);
+                            var response2 = client.PostAsync("datasets",new StringContent(st));
                             //new StringContent(result.ToString())
+                            if (response2.IsCompletedSuccessfully)
+                            {
+                                Console.Write("Success");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Error");
+                            }
                             i = 0;
                         }
                         i++;
