@@ -80,6 +80,8 @@ namespace ShopperSizerREST.Controllers
         [HttpPost]
         public async Task<ActionResult<DataSet>> PostDataSet(DataSet dataSet)
         {
+            //DataSet dataSet = new DataSet();
+            //dataSet.Count = int.Parse(dataCount);
             _context.DataSets.Add(dataSet);
             await _context.SaveChangesAsync();
 

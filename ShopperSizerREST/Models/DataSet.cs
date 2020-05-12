@@ -13,11 +13,6 @@ namespace ShopperSizerREST.Models
 
         public DataSet()
         {
-
-        }
-        public DataSet(int count)
-        {
-            Count = count;
             Date = DateTime.Now;
         }
 
