@@ -13,7 +13,7 @@ namespace ShopperSizerREST.Models
 
         public DataSet()
         {
-            Date = DateTime.Now;
+            Date = DateTime.UtcNow;
         }
 
         public int Id

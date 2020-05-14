@@ -20,13 +20,23 @@ namespace ShopperSizerREST.Controllers
             _context = context;
             if (_context.DataSets.Count() == 0)
             {
-                DataSet d1 = new DataSet(); d1.Date = DateTime.Now.Subtract(TimeSpan.FromHours(1)); d1.Count = 10;
-                DataSet d2 = new DataSet(); d2.Date = DateTime.Now.Subtract(TimeSpan.FromHours(2)); d2.Count = 20;
-                DataSet d3 = new DataSet(); d3.Date = DateTime.Now.Subtract(TimeSpan.FromHours(3)); d3.Count = 30;
-                DataSet d4 = new DataSet(); d4.Date = DateTime.Now.Subtract(TimeSpan.FromHours(4)); d4.Count = 40;
-                DataSet d5 = new DataSet(); d5.Date = DateTime.Now.Subtract(TimeSpan.FromHours(4)).Add(TimeSpan.FromMinutes(2)); d5.Count = 80;
-                DataSet d6 = new DataSet(); d6.Date = DateTime.Now.Subtract(TimeSpan.FromDays(1)).Add(TimeSpan.FromMinutes(2)); d6.Count = 90;
-                DataSet d7 = new DataSet(); d7.Date = DateTime.Now.Subtract(TimeSpan.FromDays(2)).Add(TimeSpan.FromMinutes(2)); d7.Count = 100;
+                DataSet d1 = new DataSet(); d1.Date = DateTime.UtcNow.Subtract(TimeSpan.FromHours(1)); d1.Count = 10;
+                DataSet d2 = new DataSet(); d2.Date = DateTime.UtcNow.Subtract(TimeSpan.FromHours(2)); d2.Count = 20;
+                DataSet d3 = new DataSet(); d3.Date = DateTime.UtcNow.Subtract(TimeSpan.FromHours(3)); d3.Count = 30;
+                DataSet d4 = new DataSet(); d4.Date = DateTime.UtcNow.Subtract(TimeSpan.FromHours(4)); d4.Count = 40;
+                DataSet d5 = new DataSet(); d5.Date = DateTime.UtcNow.Subtract(TimeSpan.FromHours(4)).Add(TimeSpan.FromMinutes(20)); d5.Count = 80;
+                DataSet d6 = new DataSet(); d6.Date = DateTime.UtcNow.Subtract(TimeSpan.FromDays(1)).Add(TimeSpan.FromMinutes(25)); d6.Count = 90;
+                DataSet d7 = new DataSet(); d7.Date = DateTime.UtcNow.Subtract(TimeSpan.FromDays(2)).Add(TimeSpan.FromMinutes(21)); d7.Count = 100;
+                DataSet d8 = new DataSet(); d8.Date = DateTime.UtcNow.Subtract(TimeSpan.FromDays(1)).Add(TimeSpan.FromMinutes(9)); d8.Count = 108;
+                DataSet d9 = new DataSet(); d9.Date = DateTime.UtcNow.Subtract(TimeSpan.FromHours(1)).Add(TimeSpan.FromMinutes(5)); d9.Count = 209;
+                DataSet d10 = new DataSet(); d10.Date = DateTime.UtcNow.Subtract(TimeSpan.FromHours(3)).Add(TimeSpan.FromMinutes(2)); d10.Count = 49;
+                DataSet d11 = new DataSet(); d11.Date = DateTime.UtcNow.Subtract(TimeSpan.FromHours(4)).Add(TimeSpan.FromMinutes(39)); d11.Count = 59;
+                DataSet d12 = new DataSet(); d12.Date = DateTime.UtcNow.Subtract(TimeSpan.FromHours(1)).Add(TimeSpan.FromMinutes(59)); d12.Count = 71;
+                DataSet d13 = new DataSet(); d13.Date = DateTime.UtcNow.Subtract(TimeSpan.FromHours(2)).Add(TimeSpan.FromMinutes(41)); d13.Count = 82;
+                DataSet d14 = new DataSet(); d14.Date = DateTime.UtcNow.Subtract(TimeSpan.FromHours(1)).Add(TimeSpan.FromMinutes(11)); d14.Count = 9;
+                DataSet d15 = new DataSet(); d15.Date = DateTime.UtcNow.Subtract(TimeSpan.FromHours(10)).Add(TimeSpan.FromMinutes(43)); d15.Count = 44;
+                DataSet d16 = new DataSet(); d16.Date = DateTime.UtcNow.Subtract(TimeSpan.FromHours(9)).Add(TimeSpan.FromMinutes(33)); d16.Count = 69;
+                DataSet d17 = new DataSet(); d17.Date = DateTime.UtcNow; d17.Count = 99;
                 _context.DataSets.Add(d1);
                 _context.DataSets.Add(d2);
                 _context.DataSets.Add(d3);
@@ -34,6 +44,16 @@ namespace ShopperSizerREST.Controllers
                 _context.DataSets.Add(d5);
                 _context.DataSets.Add(d6);
                 _context.DataSets.Add(d7);
+                _context.DataSets.Add(d8);
+                _context.DataSets.Add(d9);
+                _context.DataSets.Add(d10);
+                _context.DataSets.Add(d11);
+                _context.DataSets.Add(d12);
+                _context.DataSets.Add(d13);
+                _context.DataSets.Add(d14);
+                _context.DataSets.Add(d15);
+                _context.DataSets.Add(d16);
+                _context.DataSets.Add(d17);
                 _context.SaveChanges();
             }
         }
