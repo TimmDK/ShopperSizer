@@ -40,11 +40,11 @@ namespace ShopperSizerREST.Controllers
 
                 //DataSet d1 = new DataSet(10); d1.Date.AddMinutes(30);
 
-                for (int i = 0; i < 100; i++)
+                for (int i = 1; i < 100; i++)
                 {
                     Random rand = new Random();
-                    DataSet dxx = new DataSet(rand.Next(10, i*10));
-                    dxx.Date = dxx.Date.AddMinutes(30 * i);
+                    DataSet dxx = new DataSet(rand.Next(i*5, i*8));
+                    dxx.Date = dxx.Date.Subtract(TimeSpan.FromMinutes(rand.Next(25, 35) * i));
                     _context.Add(dxx);
                 }
                 _context.SaveChanges();
