@@ -22,13 +22,6 @@ namespace ShopperSizerREST.Controllers
             return Hours;
         }
 
-        // PUT api/<controller>/5
-        //[HttpPut]
-        //public StoreHours Put([FromBody]StoreHours value)
-        //{
-        //    Hours = value;
-        //    return Get();
-        //}
         [HttpPut]
         [Route("open/{hour}")]
         public StoreHours PutOpen(int hour)

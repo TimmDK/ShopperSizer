@@ -26,13 +26,6 @@ namespace ShopperSizerREST.Models
         {
             get { return _number; }
             set { _number = value; }
-            //set
-            //{  
-            //    if (value > -1)
-            //    {
-            //        _number = value;
-            //    }
-            //}
         }
     }
 }
