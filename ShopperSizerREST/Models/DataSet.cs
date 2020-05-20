@@ -13,11 +13,11 @@ namespace ShopperSizerREST.Models
 
         public DataSet()
         {
-            Date = DateTime.Now.AddHours(2);
+            Date = DateTime.Now; //.AddHours(2);
         }
         public DataSet(int i)
         {
-            Date = DateTime.Now.AddHours(2);
+            Date = DateTime.Now; //.AddHours(2);
             Count = i;
         }
 
